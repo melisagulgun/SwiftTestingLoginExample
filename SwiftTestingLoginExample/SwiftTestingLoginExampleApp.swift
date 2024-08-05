@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftTestingLoginExampleApp: App {
+    @State var password: String = ""
+    @State var email: String = ""
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(emailText: $email, passwordText: $password)
         }
     }
 }
